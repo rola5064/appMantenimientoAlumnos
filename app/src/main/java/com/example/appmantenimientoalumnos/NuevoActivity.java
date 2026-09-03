@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.appmantenimientoalumnos.db.alumnos;
+
 public class NuevoActivity extends AppCompatActivity {
     //Asignar nuestras variables
     private EditText txtnombre,txtTelefono,txtCorreoElectronico;
@@ -27,7 +30,7 @@ public class NuevoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //cambiar el nombre de la clase alumnos por Dbalumno
-                Dbalumnos dbalumnos = new Dbalumnos(NuevoActivity.this);
+                alumnos dbalumnos = new alumnos(NuevoActivity.this);
 
                 long id=dbalumnos.insertarContactos(txtnombre.getText().toString(),txtTelefono.getText().toString(),txtCorreoElectronico.getText().toString());
 

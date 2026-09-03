@@ -2,6 +2,9 @@ package com.example.appmantenimientoalumnos;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -10,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.example.appmantenimientoalumnos.db.DbHelper;
 public class MainActivity extends AppCompatActivity {
     private Button btnCrear;
     @Override
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_principal, menu);
         return true;
     }
+    //creamos otro metodo
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
